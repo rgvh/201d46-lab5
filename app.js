@@ -10,10 +10,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-    var added = a + b;
-    var returnString = 'The sum of ' + a + ' and ' + b + ' is ' + added + '.';
-    console.log('added : ' + added + '.');
-    return  [added, returnString];
+  var added = a + b;
+  var returnString = 'The sum of ' + a + ' and ' + b + ' is ' + added + '.';
+  console.log('added : ' + added + '.');
+  return  [added, returnString];
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -32,10 +32,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-    var multiplyNum = a * b;
-    var returnString = 'The product of ' + a + ' and ' + b + ' is ' + multiplyNum + '.';
-    console.log('muliplyNum : ' + multiplyNum + '.');
-    return [multiplyNum, returnString]
+  var multiplyNum = a * b;
+  var returnString = 'The product of ' + a + ' and ' + b + ' is ' + multiplyNum + '.';
+  console.log('muliplyNum : ' + multiplyNum + '.');
+  return [multiplyNum, returnString];
 
 }
 
@@ -58,34 +58,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    var sumArray = [a, b, c];
-    
-    var sumThree = a + b + c;
+  var addTwo = sum(a,b);
+  var addThree = sum(parseInt(addTwo), c);
 
-        // for (var i = 0; i < sumArray.lenth; i++){
-        //     sumThree = sum(sumArray[i])
+  var productOfTwo = multiply(a,b);
+  var productThree = multiply(parseInt(productOfTwo), c);
 
-    //     sumThree += (sumArray[i]);
-    //     var sumThree = sumArray[i] + sumArray[i++];
-
-    var multiplyThree = a * b * c
-
-    var returnStringSumThree =  a + ' and ' + b + ' and ' + c + ' sum to 16.'
-    var returnStringMultiplyThree = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is 140.'
-
-        // }
-
-    // }
-    // console.log('sumTwo: ' + sumTwo);
-    console.log('sumThree: ' + sumThree);
-    console.log('multiplyThree: ' + multiplyThree);
-    console.log('returnStringSumThree: ' + returnStringSumThree);
-    console.log('returnStringMultiplyThree: ' + returnStringMultiplyThree);
-    return [sumThree, multiplyThree, returnStringSumThree, returnStringMultiplyThree];
-
+  var returnStringSumThree =  a + ' and ' + b + ' and ' + c + ' sum to ' + parseInt(addThree) + '.';
+  var returnStringMultiplyThree = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + parseInt(productThree) + '.';
+  console.log(returnStringSumThree);
+  console.log(returnStringMultiplyThree);
+  return [parseInt(addThree), parseInt(productThree), returnStringSumThree, returnStringMultiplyThree];
 }
-
-// Here is the test for sumAndMultiply(); uncomment it to run it
+// Here is the test for sumAndMultiply(); uncomment it to run it 
 testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
