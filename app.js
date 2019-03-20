@@ -91,11 +91,10 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) { //eslint-disable-line
   var addArrayTwo = sum(testArray[0], testArray[1]);
   var addArrayThree = sum(parseInt(addArrayTwo), testArray[2]);
-  var returnStringSumArray = [testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + parseInt(addArrayThree) + ' is their sum.'];
-  console.log(returnStringSumArray);
+  var returnStringSumArray = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + parseInt(addArrayThree) + ' is their sum.';
+  console.log(typeof returnStringSumArray);
   console.log(parseInt(addArrayThree));
-	return [parseInt(addArrayThree), returnStringSumArray];
-	// '2,3,4 was passed in as an array of numbers, and 9 is their sum.'
+  return [parseInt(addArrayThree), returnStringSumArray];
   // return [9, '2,3,4 was passed in as an array of numbers, and 9 is their sum.'];	
 }
 
